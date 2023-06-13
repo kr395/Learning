@@ -65,6 +65,7 @@ print(not(True))
 # Strings and Strings Method
 name = 'Gopal Kumar Das'
 print(name[0:9])
+name.rfind
 
 
 
