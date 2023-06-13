@@ -61,12 +61,21 @@ print(x == z and x < y)
 print(x == z or x < y)
 print(not(True))
 
-'''
 # Strings and Strings Method
 name = 'Gopal Kumar Das'
 print(name[0:9])
 name.rfind
+#Exersise - Write a input to get name and age and print the avarage
 
+name = input('Enter your name: ')
+print('Hiiii! ' + name + ' Now Enter your age: ')
+age = input('Enter your age: ')
+f_age = input('Enter your Friend age: ')
+average= (int(f_age)+int(age))/2
+print('Hiiii! ' + name +' Your are '+ age + ' year old')
+print('Avarage age of Your and your friend is ' + str(average))
+
+'''
 
 
 
