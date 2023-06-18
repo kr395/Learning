@@ -1,0 +1,12 @@
+In this learning path we made projects 
+
+
+1. Passenger Counter 
+
+
+
+
+
+
+2.Blackjack game
+3. Lead Tracker chrome extention
