@@ -1,9 +1,37 @@
-body {
-      background-image: url("https://unsplash.com/photos/IvFqwzFzBFs");
+* {
+      color: beige;
+      
 }
 h1,h2 {
     text-align: center;
     color: chocolate;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+.counter {
+    width: 50%;
+    height: 400pt;
+    background-color: rgb(252, 192, 255);
+    margin:52px auto auto auto;
+    border: none;
+    border-radius: 15pt;
+    padding-top: 50px;
+    
+    
+}
+#btn_plus,#btn_min {
+    background-color: rgb(162, 95, 255);
+    width: 150px;
+    height: 50px;
+    margin: auto auto 5pt 50pt;
+    color: rgb(255, 244, 244);
+    border: none;
+    overflow: hidden;
+    border-radius: 10pt;    
+    
+
+}
+#incr_btn:hover {
+    background-color: rgb(215, 130, 255);
 }
