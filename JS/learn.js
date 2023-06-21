@@ -56,8 +56,8 @@ var an = an_array;
 console.log(an);
 an_array.pop();
 console.log(an_array); //changes the original reference
- */
-//Conditionals - if else else-if
+
+//Conditionals ✅ - if else else-if
 const age = 18
 if(age > 18) {
       console.log("You are Adult")
@@ -68,3 +68,31 @@ else if(age = 18) {
 else {
     console.log("You are Adult")
 }
+
+//Loop✅  
+//For and While
+//For Loop
+for(var i = 26; i > 0, i--;) {
+    console.log(i) 
+}
+//While Loop
+var i = 26
+while(i > 0) {
+    i--
+    console.log(i)
+}
+//function✅ 
+//arguments and  
+function coock(a, b, c, d, e, f){ //a,b,c,d,e,f is arguments
+    var g = a+b+c+d+e+f;
+    console.log(g);
+}
+
+coock(1, 2, 3, 4, 5, 6)//paramiters
+
+//Array ✅
+var names = ["Gopal", "Aman", "Pranjul","Gulshan"];
+//Array Methods
+names.push("Mohit");
+console.log(names);
+*/
