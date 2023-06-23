@@ -95,4 +95,58 @@ var names = ["Gopal", "Aman", "Pranjul","Gulshan"];
 //Array Methods
 names.push("Mohit");
 console.log(names);
+
+//JavaScript | Beginning to Mastery Complete Tutorial (Part 1)
+//Var
+//Let
+//Const 
+//Data Types
+
+//String Methods
+let Name = '35'
+let Length = Name.length
+let Slice = Name.slice()
+let Substring = Name.substring()
+let Substr = Name.substr()
+let Replace = Name.replace()
+let Replaceall = Name.replaceAll()
+let Upper = Name.toUpperCase()
+ let Lower= Name.toLowerCase()
+ let Concat = Name.concat()
+ let Trim = Name.trim()
+ let trimStart=Name.trimStart()
+ let trimEnd= Name.trimEnd()
+ let padStart= Name.padStart()
+ let padEnd= Name.padEnd()
+ let charAt= Name.charAt()
+ let charCode= Name.charCodeAt()
+ let split =Name.split()
+ console.log(split)
+console.log(Number(Name))
+
+//Template string
+let name = "Gopal";
+let age = 25;
+let aboutMe = "My Name Is "+name+" and Age Is "+age //Normal
+let aboutMe2 = `My name is ${name} and my age is ${age}`//With Template string
+console.log(aboutMe, aboutMe2);
+let num = BigInt(541)
+let age = 546n;//Assign Big int
+// == vs ===
+//== only chek value
+//=== also checks Data types
+//if else condition
 */
+let age = 19;
+let buttton = document.querySelector('button');
+function myFunction(){
+    if(age % 2 == 0){
+        document.querySelector("p").innerHTML = "You Enterd a Even Number" ;  
+      }
+      else{
+        document.querySelector("p").innerHTML ="You entered a Odd Number"
+      }
+      
+}
+buttton.addEventListener('click', myFunction)
+
