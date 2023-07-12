@@ -497,12 +497,99 @@
 // console.log(`The Value of Name2 is ${name2}`)
 //In case of primitive Data type its Not changing its Normal
 
-let names = ["Gopal","Mohit"]
-let names2 = names;
-console.log("names: ", names)
-console.log("names2: ", names2)
-names.push("Gulshan")
-console.log("After pushing a name in names Array")
-console.log("names: ", names)
-console.log("names2: ", names2)
+// let names = ["Gopal","Mohit"]
+// let names2 = names;
+// console.log("names: ", names)
+// console.log("names2: ", names2)
+// names.push("Gulshan")
+// console.log("After pushing a name in names Array")
+// console.log("names: ", names)
+// console.log("names2: ", names2)
 
+// ✅ Array Cloning
+// concatenate two array
+// let array1 =["Gopal",2,null,true]
+// let array2 = ["Aman"]
+// // let array3 = array1.concat(array2)
+// let array3 = array1.concat(["Himan","Ani"])
+// //spread operator
+// let array4 = [...array1,"Hello"]
+
+// console.log(array4)
+
+// ✅ For loop in array
+
+// let fruits = ["apple","mango","grapes"]
+// let newArray =[]
+// for (let i = 0; i < fruits.length; i++) {
+//   newArray.push(fruits[i].toUpperCase())
+    
+// }
+// console.log(newArray)
+
+// ✅ For of Loop   (itrating array)
+
+// let fruits = ["apple","mango","grapes"]
+// for(let fruit  of fruits){ //It creates  a varible  and stores values in it 
+//     //from an array named  fruits 
+//     console.log(fruit)
+// }
+// // ✅ For in Loop
+// for(let index  in fruits){ //It creates  a varible  and stores index number in it 
+//     //from an array named  fruits 
+//     console.log(fruits[index])
+// }
+// ✅ array Destructuring
+// Shortcut Method for creating multiple variable and store date from an array
+// let fruits = ["apple","mango","grapes","banana"]
+// let newFruits = fruits.slice(2)
+// const [var1,var2, ...newFruits] = fruits //Special Method in Js to do so
+
+// console.log(var1)
+// console.log(var2)
+// console.log(newFruits)
+
+// ✅ Objects   (Reference Type)
+//    Objects are based on Key Value Pare
+// const mohit ={
+//     name:"Mohit Kumar",
+//     age:30,
+//     dob: new Date(),
+//     hobys:["Typing","Computer","Caram"],
+//     "new Data": "Unknown"
+//     //bracket notation
+//     //by default name age dob keys are in string format even it not between quets
+// }
+// //Add New Key Value pare
+// mohit.charecter = true
+// //Objects Don't have index
+// //We have to acces data using it's key name
+
+// console.log(mohit["new Data"])
+
+// Adding new Key with given data in key variable
+
+// const key =  "Email";
+
+// const person ={
+//     age:22,
+//     language:"Bengali"
+// }
+
+// person[key]= "randomemail@krmail.com";
+
+// // console.log(person.Email)
+
+// //✅(Itrating objects Using -  For in loop and Object.keys method)
+// // For in loop
+// // for(let key in person){
+// //     console.log(person[key])
+// // }
+// //Object.keys
+// console.log(Object.keys(person)) // gives us a array
+// // let personArray = Object.keys(person)
+// for(let key of Object.keys(person)){
+//      console.log("My",`${key}`,"is "," : ",person[key])
+// }
+
+// Video time 4:19:18
