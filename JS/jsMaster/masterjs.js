@@ -152,6 +152,10 @@
 // ✅All Operators
 //  Arithmetic Operators
 // +,-,*,**,/,%,++,--
+// let a = 10;
+// let b = 12;
+// let c = b%a;
+// console.log(`Value of C is ${c}`)
 // Assignment Operators
 // =, +=, -=,*=,/=,%=,**=  // x += y  same as x = x+y
 
@@ -381,9 +385,9 @@
 //     console.log("Invalid Day");
 // }
 
-// ✅while loop 
+// ✅while loop
 
-// 0 se 9 
+// 0 se 9
 // dry don't repeat yourself
 // let i = 0; // 1 2 3 4
 
@@ -400,11 +404,10 @@
 //     console.log(inputValue)
 //     inputValue++
 // }
-// while loop example 
+// while loop example
 // let num = 100;
 // let total = 0; //1 + 2 +3
 // let i = 0;
-
 
 // while(i<=100){
 //     total = total + i;
@@ -416,7 +419,7 @@
 // let total = (num*(num+1))/2;
 // console.log(total);
 
-// ✅intro to for loop 
+// ✅intro to for loop
 // print 0 to 9
 
 // for(let i = 0;i<=9;i++){
@@ -424,7 +427,7 @@
 // }
 
 // console.log("value of i is ",i);
-// ✅break keywork and continue keyword 
+// ✅break keywork and continue keyword
 
 // for(let i = 1; i<=10; i++){
 //     if(i===4){
@@ -455,4 +458,51 @@
 
 // console.log("value of i is ", i);
 
+// ✅ Arrays  rererence type
+// let names = ["Gopal","Aman","Mohit"]
+// let type = typeof(names)
+// console.log(typeof(type))
+// let obj = {} //we make objects using curly brases
+// // you can store multiple types of Data
+// let array = ["Gopal",22,null,BigInt(12222)]
+// console.log(array[3])
+// // Array is a Object
+// console.log(Array.isArray(obj))
+
+// ✅ Arrays methods
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// let arrayMethod = numbers.length;
+// let arrayMethod = numbers.toString();
+// let arrayMethod = numbers.pop(); //Delete last index data returns the data
+// let arrayMethod = numbers.push(); //Add data in -1th or last index
+// let arrayMethod = numbers.shift(); //Remove data from 0th Index
+// let arrayMethod = numbers.unshift();//Add data in 0th Index
+// let arrayMethod = numbers.join();
+// let arrayMethod = numbers.delete();
+// let arrayMethod = numbers.concat();
+// let arrayMethod = numbers.flat();
+// let arrayMethod = numbers.splice();
+// let arrayMethod = numbers.slice();
+// console.log(numbers)
+
+// ✅ Primitive vs reference data type 
+//Primitive
+// let aName = "Gopal";
+// let name2 = aName;
+// console.log(`The Value of aName is ${aName}`)
+// console.log(`The Value of Name2 is ${name2}`)
+// aName = "Mohit"
+// console.log("After Changing the Value of aName")
+// console.log(`The Value of aName is ${aName}`)
+// console.log(`The Value of Name2 is ${name2}`)
+//In case of primitive Data type its Not changing its Normal
+
+let names = ["Gopal","Mohit"]
+let names2 = names;
+console.log("names: ", names)
+console.log("names2: ", names2)
+names.push("Gulshan")
+console.log("After pushing a name in names Array")
+console.log("names: ", names)
+console.log("names2: ", names2)
 
