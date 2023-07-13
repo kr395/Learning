@@ -485,7 +485,7 @@
 // let arrayMethod = numbers.slice();
 // console.log(numbers)
 
-// ✅ Primitive vs reference data type 
+// ✅ Primitive vs reference data type
 //Primitive
 // let aName = "Gopal";
 // let name2 = aName;
@@ -523,20 +523,20 @@
 // let newArray =[]
 // for (let i = 0; i < fruits.length; i++) {
 //   newArray.push(fruits[i].toUpperCase())
-    
+
 // }
 // console.log(newArray)
 
 // ✅ For of Loop   (itrating array)
 
 // let fruits = ["apple","mango","grapes"]
-// for(let fruit  of fruits){ //It creates  a varible  and stores values in it 
-//     //from an array named  fruits 
+// for(let fruit  of fruits){ //It creates  a varible  and stores values in it
+//     //from an array named  fruits
 //     console.log(fruit)
 // }
 // // ✅ For in Loop
-// for(let index  in fruits){ //It creates  a varible  and stores index number in it 
-//     //from an array named  fruits 
+// for(let index  in fruits){ //It creates  a varible  and stores index number in it
+//     //from an array named  fruits
 //     console.log(fruits[index])
 // }
 // ✅ array Destructuring
@@ -592,4 +592,191 @@
 //      console.log("My",`${key}`,"is "," : ",person[key])
 // }
 
-// Video time 4:19:18
+// ✅Computed Properties
+
+// const key1 = "Object1"
+// const key2 = "Object2"
+
+// const value1 = "myvalue1"
+// const value2 = "myvalue2"
+
+//Make a object with keys of key1 and key2 and give them value value1
+//and value2
+
+// const obj = {
+//     [key1]:value1,
+//     [key2]:value2
+// }
+// console.log(obj)
+//Another Way
+// const obj ={};
+// obj[key1]= value1
+// obj[key2]= value2
+
+// ✅Spread Operator in object
+
+// const array1 = [1,2,3]
+// const array2 = [4,5,6]
+
+// const newArray = [...array1,...array2] //sprading or cloning array to a new array
+// const nam = "Gopal"
+// const array = [...nam] //sprading a string in a array
+// array.pop()
+// const obj1 = {
+//   name: "Gopal",
+//   age: "22",
+//   //One name of key is allowed
+// };
+
+// const obj2 = {
+//   name2: "Mohit",
+//   age2: "29",
+// };
+
+// const newObj = {...obj1,...obj2};
+// const newObj1= {..."Gopa Kumar"} //with String
+// const arrayObj = {...["Gopal","Aman","Mohit"]}
+// console.log(newObj)
+
+// ✅Object Destructuring
+
+// const car= {
+//     carName:"Volvo",
+//     model:"v2",
+//     price:1500000,
+// }
+
+// const {carName:carName1, model:model1} = car;  //creates variable and assing value line by line
+//You can change name by using colon
+
+// ✅Objects inside Array
+
+// const users =[
+//     {    userId:1, firstName:"Gopal", gender:"Male", },
+//     {    userId:2, firstName:"Aman", gender:"Male", },
+//     {    userId:3, firstName:"Mohit", gender:"Male", }
+// ]
+
+// let firstNames = []
+// for(let user of users){
+//     // console.log(user)
+//     firstNames.push(user.firstName)
+// }
+// console.log(firstNames)
+
+// ✅nested Destructuring
+
+// const users =[
+//     {    userId:1, firstName:"Gopal", gender:"Male", },
+//     {    userId:2, firstName:"Aman", gender:"Male", },
+//     {    userId:3, firstName:"Mohit", gender:"Male", }
+// ]
+// const [user1,user2,user3]= users
+// const[{firstName:user1FirstName},{userId},{gender}] = users
+// console.log(user1FirstName)
+
+// ✅Functions
+
+// function nameWriter(){
+//     console.log(`My Name is Gopal`)
+// }
+// for (let i = 0; i <10; i++) {
+//     nameWriter ()
+
+// }
+// let i = 0
+// while(i<10){
+//     nameWriter()
+//     i++
+// }
+// console.log("Gopal")
+
+// function sum(num1,num2){//num1 is a argument
+//     console.log(num1+num2)
+
+// }
+// sum(1,5)
+
+// function oddEven(number) {
+//   if (number / 2 === 0) {
+//     console.log("Even");
+//   } else {
+//     console.log("Odd");
+//   }
+// }
+// oddEven(25);
+
+// function firstCharacter(string){
+//     console.log(string[0]);
+// }
+// firstCharacter("Gopal")
+
+// ✅Functions Expression
+// Asinging funciton to a variable
+
+// const firstCharacter = function(string){
+//     console.log(string[0]);
+// }
+// firstCharacter("Gopal")
+
+// ✅Arrow Functions
+
+// const firstCharacter = (string)=>{  // Don't need to use function keyword in functions
+//     console.log(string[0]);
+// }
+// firstCharacter("Gopal")
+
+// const isEven =(number)=>{
+//     if(number % 2 === 0){
+//         console.log("The Number is Even")
+//     } 
+//     else{
+//         console.log("The Number is Odd")
+//     }
+// }
+// isEven(123)
+
+
+//Create a function which return  User name from object
+
+// const user={
+//     name:"Gopal",
+//     age:22,
+// }
+
+
+// const userNameChaker =()=>{
+    
+//      const {name} = user;
+//      console.log(name)
+// }
+// userNameChaker()
+
+// ✅Hoisting
+
+// printName()
+
+
+// function printName(){
+//   console.log("Gopal")
+// }
+
+// console.log(hello)
+// var hello = "Gopal"
+
+// ✅ Functions in function
+
+// const app= ()=>{
+//     const printName = ()=>{
+//         console.log("Gopal")
+//     }
+//     const printAge = ()=>{
+//         console.log(22)
+//     }
+//    console.log("Inside app function")
+   
+// }
+// app()
+
+
+// Video time 5:33:29
