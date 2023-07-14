@@ -955,12 +955,12 @@
 
 
 // ✅ Reduce Method
-const numbers = [1,4,6,8,9,5,1,3]
+// const numbers = [1,4,6,8,9,5,1,3]
 
-const sum = numbers.reduce((accumulator,currentValue)=>{
-     return accumulator + currentValue
-},100) //We can give initial value to accumulator like in this case 100
-console.log(sum)
+// const sum = numbers.reduce((accumulator,currentValue)=>{
+//      return accumulator + currentValue
+// },100) //We can give initial value to accumulator like in this case 100
+// console.log(sum)
 // first accuumulator = 1
 // and currentValue = 4
 // returns 4+1 = 5
@@ -970,15 +970,25 @@ console.log(sum)
 
 //Real Life Example
 
-const userCart=[
-    {productId: 1, ProductName:"Laptop",price: 60000},
-    {productId: 2, ProductName:"Mobile",price: 35000},
-    {productId: 3, ProductName:"pen",price: 25},
-    {productId: 4, ProductName:"Zins",price: 600},
-] 
-const totalAmmount = userCart.reduce((accumulator,CurrentValue)=>{
-       return accumulator
-})
+// const userCart=[
+//     {productId: 1, ProductName:"Laptop",price: 60000},
+//     {productId: 2, ProductName:"Mobile",price: 35000},
+//     {productId: 3, ProductName:"pen",price: 25},
+//     {productId: 4, ProductName:"Zins",price: 600},
+// ] 
+// const totalAmmount = userCart.reduce((accumulator,CurrentValue)=>{
+//        return accumulator + CurrentValue.price
+// },0)
 
-console.log(totalAmmount)
+// console.log(totalAmmount)
 
+// ✅ Sort Method
+
+// const numbers = [1200,3,89,5,6,4,7,85]
+// const names = ["gopal","mohit"]
+// numbers.sort()  //Sort method trit this array as string ["1","3"]
+// names.sort() 
+// console.log(numbers)
+// console.log(names)
+
+// video 7:13:27
