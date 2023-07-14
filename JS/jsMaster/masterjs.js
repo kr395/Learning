@@ -729,13 +729,12 @@
 // const isEven =(number)=>{
 //     if(number % 2 === 0){
 //         console.log("The Number is Even")
-//     } 
+//     }
 //     else{
 //         console.log("The Number is Odd")
 //     }
 // }
 // isEven(123)
-
 
 //Create a function which return  User name from object
 
@@ -744,9 +743,8 @@
 //     age:22,
 // }
 
-
 // const userNameChaker =()=>{
-    
+
 //      const {name} = user;
 //      console.log(name)
 // }
@@ -755,7 +753,6 @@
 // ✅Hoisting
 
 // printName()
-
 
 // function printName(){
 //   console.log("Gopal")
@@ -774,9 +771,214 @@
 //         console.log(22)
 //     }
 //    console.log("Inside app function")
-   
+
 // }
 // app()
 
+// ✅ Lexical Scope
 
-// Video time 5:33:29
+// const myVar = "value1"; //This Variable in Global Scope
+
+// function myApp() {
+//   //This is lexical Enviorment
+
+//   function myFunc() {
+//     // const myVar = "value59";
+//     const myFunc2 = () => {
+//       console.log("inside myFunc", myVar);
+//     };
+//     myFunc2();
+//   }
+//   console.log(myVar);
+//   myFunc();
+// }
+
+// myApp();
+
+// ✅ Block Scope vs Function Scope
+
+//Let and const are block Scope
+//var is function scope
+//whole file compiled as a function
+// {
+//   //This is block
+//   let a = 5;
+// }
+// {
+//     //This is block
+//   let a = 9;
+// }
+// console.log(a)ll
+
+// ✅ default parameters
+// function addTwo(a=0,b=0){//Satting default value as zero
+//     console.log(a+b)
+// }
+// addTwo()
+
+// ✅ rest parameters
+// const myFunc = (a = 0, b = 0, c = 0, ...d) => {
+//   ///...is rest paramiter
+//   console.log(`a is ${a}`);
+//   console.log(`b is ${b}`);
+//   console.log(`c is ${c}`);
+//   console.log(`d is`, d);
+// };
+
+// myFunc(5, 8, 9, 4, 5, 6, 7, 8);
+
+// const addAll = function (...numbers) {
+//   let sum = 0;
+//   for (number of numbers) {
+//     sum += number;
+//   }
+//   //    console.log(`sum of all Numbers is ${sum}`)
+//   return sum;
+// };
+
+// const total = addAll(5, 5, 9, 63, 98, 45, 5);
+// console.log(`sum of all Numbers is ${total}`);
+
+//✅ param Destructuring
+
+// const person = {
+//   name: "Gopal",
+//   age: 22,
+// //   gender:"male",
+// };
+
+// function details({name,age=18,gender="Blank"}){ //Destructuring Objcet in paramiter
+//    console.log(`Hello ${name} You are ${age} and your gender is ${gender} `)
+// }
+// details(person) // person gives above function an objcet 
+
+// ✅ callback Functions
+
+// function myFunc(callback){ //callback is a function as param
+// //    console.log(a)
+//  callback()
+  
+// }
+
+// function myFunc2(){
+//     var nam = "Gopal"
+//     console.log("Hello from myFunc2", nam)
+// }
+// myFunc(myFunc2)
+
+// ✅ Function returning funciton
+
+// function myFunc(name){
+//     return name
+// }
+
+// const result = myFunc("Gopal")
+// console.log(result)
+
+// function calc(){
+//     function sum(a,b){
+//         console.log(a+b)
+//     }
+//    return sum
+// }
+
+// const result = calc()
+// console.log(result(25,56))
+
+// ✅ Important array methods
+
+//forEach
+//map
+//filter
+//reduce
+
+// const numbers = [1,4,6,8,9,5]
+// ✅ For Each
+//Normar Method
+// const multiply = ()=>{
+//        for(number of numbers){
+//            console.log(`${number}*2 = ${number*2}`)
+//        }
+// }
+// multiply()
+// Using array method
+// function printMultiply(number, index){
+
+//     console.log(`Index - ${index} & Number = ${number}`)
+// }
+
+// numbers.forEach(printMultiply)
+
+//Using For Each Method
+// numbers.forEach((number)=>{
+//          console.log(`${number}*2 = ${number*2}`)
+// })
+
+// const users = [
+//     {name:"Gopal",age:22},
+//     {name:"Aman",age:21},
+//     {name:"Mohit",age:29},
+//     {name:"Gulshan",age:25}
+// ]
+// //For Each is like a loop 
+// users.forEach(function(obj,index){ //This is anonomus function means it has no name
+//         console.log(`User ${index} name is ${obj.name}`)   
+// })
+
+// ✅ Map Method
+// const numbers = [1,4,6,8,9,5]
+// const value = numbers.map((number,index)=>{ // map always create a new array every loop
+//     // console.log(number*number)
+//     return number* number   //To use map we have to return
+// })
+// console.log(value)
+// const users = [
+//     {name:"Gopal",age:22},
+//     {name:"Aman",age:21},
+//     {name:"Mohit",age:29},
+//     {name:"Gulshan",age:25}
+// ]
+
+// const userAge = users.map((userObj,index)=>{
+//      return userObj.name
+// })
+// console.log(userAge)
+
+// ✅ Filter Method
+// const numbers = [1,4,6,8,9,5,1,3]
+//filter numers
+//Filter method returns bulian value
+// const array = numbers.filter((number,index)=>{
+//     return number  !== number
+// })
+// console.log(array)
+
+
+// ✅ Reduce Method
+const numbers = [1,4,6,8,9,5,1,3]
+
+const sum = numbers.reduce((accumulator,currentValue)=>{
+     return accumulator + currentValue
+},100) //We can give initial value to accumulator like in this case 100
+console.log(sum)
+// first accuumulator = 1
+// and currentValue = 4
+// returns 4+1 = 5
+// next acccumulator is = 5
+// and currentValu = 6
+//  returns 6+5 = 11
+
+//Real Life Example
+
+const userCart=[
+    {productId: 1, ProductName:"Laptop",price: 60000},
+    {productId: 2, ProductName:"Mobile",price: 35000},
+    {productId: 3, ProductName:"pen",price: 25},
+    {productId: 4, ProductName:"Zins",price: 600},
+] 
+const totalAmmount = userCart.reduce((accumulator,CurrentValue)=>{
+       return accumulator
+})
+
+console.log(totalAmmount)
+
