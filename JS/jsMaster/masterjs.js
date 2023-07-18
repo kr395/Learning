@@ -946,12 +946,13 @@
 
 // ✅ Filter Method
 // const numbers = [1,4,6,8,9,5,1,3]
-//filter numers
-//Filter method returns bulian value
-// const array = numbers.filter((number,index)=>{
-//     return number  !== number
+// // filter numbers
+// // Filter method returns bulian value
+
+// const moreThan5 = numbers.filter((number,index)=>{
+//     return number >= 5
 // })
-// console.log(array)
+// console.log(moreThan5)
 
 
 // ✅ Reduce Method
@@ -991,4 +992,121 @@
 // console.log(numbers)
 // console.log(names)
 
-// video 7:13:27
+// const numbers = [1200,3]
+// const sorted = numbers.sort((a,b)=>{
+//      return a-b
+// })
+// console.log(sorted)
+//For example
+// 1200 and 3
+// a = 1200 and b= 3
+// return  a - b = 1200 - 3 = positive value 
+// if returns positive value b will appare first 
+//for oposite situation (for desending value)b - a = negetive value the a will appeare first 
+
+//Realistic Example
+// Price low To High
+// const products =[
+//     {productId:1,productName:"Smart Watch",price:2900},
+//     {productId:2,productName:"Smart Watch",price:1900},
+//     {productId:3,productName:"Smart Watch",price:2500}
+// ]
+// //Short Method
+// const lowToHigh = products.slice(0).sort((a,b)=>{
+//     return a.price - b.price
+
+// })
+// //Long Method
+// const price = products.map((obj,index)=>{
+//         return obj.price
+// })
+// const low_high = price.sort((a,b)=>{
+//       return a - b
+// })
+// console.log(low_high)
+
+// ✅ find Method 
+
+// const names = ["Gopal","Sujit","Ajit","Montosh"]
+
+// const isLength5 = function(string){
+//       return string.length === 5;
+// }
+
+// names.find(isLength5)
+// // console.log(isLength5("Gopal"))
+// console.log(names.find(isLength5)) //Only return once first value and stoped
+// find method 
+// const name4Letter= names.find((name)=>{
+//        return name.length === 4
+// })
+// console.log(name4Letter)
+
+// const products =[
+//     {productId:1,productName:"Smart Watch",price:2900},
+//     {productId:2,productName:"Smart Watch",price:1900},
+//     {productId:3,productName:"Smart Watch",price:2500}
+// ]
+// const findId3 = products.find((product)=>product.productId === 3)
+// console.log(findId3)
+
+// ✅ every Method
+
+// const numbers = [6,8,4]
+
+// const evenCheck = numbers.every((number)=>number%2 === 0)
+// console.log(evenCheck) //Even one number odd it returns false
+
+//Every Method cheks every Item for given condition
+
+// const products =[
+//     {productId:1,productName:"Smart Watch",price:2900},
+//     {productId:2,productName:"Smart Watch",price:1900},
+//     {productId:3,productName:"Smart Watch",price:499},
+//     {productId:3,productName:"Smart Watch",price:500},
+//     {productId:3,productName:"Smart Watch",price:200},
+// ]
+
+// Check Every product greater than 1500? using find method
+
+// const moreThan1500 = products.slice(0).every((product)=>product.price < 3000)
+
+// console.log(moreThan1500)
+//Filter under 500 product
+// const prices = products.slice(0).map((product)=> product.price).filter((price)=>price<=500)
+
+// console.log(prices)
+// const under500 = prices.filter((price)=> price <= 500)
+// console.log(under500)
+
+// ✅ some Method
+
+// const numbers = [3,5,8,6]
+
+// Returns true or false
+// Check Every Value and returns even one number satisfies the condition
+
+// Check any number grater than 5
+
+// const checkG5 = numbers.some((number)=>number <= 5)
+// console.log(checkG5)
+// const products =[
+    //     {productId:1,productName:"Smart Watch",price:2900},
+    //     {productId:2,productName:"Smart Watch",price:1900},
+//     {productId:3,productName:"Smart Watch",price:499},
+//     {productId:3,productName:"Smart Watch",price:500},
+//     {productId:3,productName:"Smart Watch",price:200},
+// ]
+// const isMoreThan3000 = products.slice(0).some((product)=>product.price <= 3000)
+// console.log(isMoreThan3000)
+
+// ✅ fill Method
+//Value, start, end
+
+// const number = new Array(10).fill(25)
+// console.log(number)
+
+// const numbers = [1,5,8,6,3,5]
+// numbers.fill(0,3,5)
+// console.log(numbers)
+
