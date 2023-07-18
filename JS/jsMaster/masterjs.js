@@ -1110,3 +1110,13 @@
 // numbers.fill(0,3,5)
 // console.log(numbers)
 
+// ✅ splice Method
+
+//Start, delete , insert
+
+// const names = ["Gopal","Sujit","Suman"]
+// const deleted = names.splice(1,1,"Rabi")
+// console.log(names)
+// console.log(deleted)
+
+// 7:52:25
