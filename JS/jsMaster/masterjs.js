@@ -1112,11 +1112,270 @@
 
 // ✅ splice Method
 
-//Start, delete , insert
+//Start Index, delete count, insert
 
 // const names = ["Gopal","Sujit","Suman"]
 // const deleted = names.splice(1,1,"Rabi")
 // console.log(names)
-// console.log(deleted)
+// console.log(deleted) 
 
-// 7:52:25
+// Ctrl + Shift + o  - to find function and variable
+//Ctrl + G - Go to line number
+// ✅ iterables
+
+// iterables
+// (String and array)
+
+// const name = "Gopal"
+// for (const char of name) {
+//      console.log(char)
+// }
+
+// const numbers = [1,5,42,6,8,4]
+// for (const number of numbers) {
+//      console.log(number * 2)
+// }
+
+// array like object 
+// const employ = {empId:3211,empName:"Gopal",Sallary:50000}
+//Object isn't iterables
+// array like object has length propery
+//We can acces using index number 
+
+// String is a Arry Like Object 
+
+// ✅ Sets object
+// Set Don't Allow Duplicate Values
+
+// const names = new Set(["Gopal","Sujit","Rabi"])
+// console.log(names)
+//We can't acces using index
+// console.log(names[1])
+// const numbers = new Set()
+// numbers.add([5,2,5])
+// numbers.add(56)
+// numbers.add(4)
+// numbers.add(2)
+// numbers.add(3)
+// // console.log(numbers)
+// for (const number of numbers) {
+//     console.log(number)
+// }
+
+//Get uniqe values from a array using Set Method
+// const names = ["Gopal","Sujit","Gopal"]
+// const set = new Set(names)
+// console.log(set)
+
+// const me = new Set()
+
+// me.add("Gooopal")
+// me.add("Gooopal") //Duplicate Value isn't Allowed
+
+// ✅ Maps Object
+
+// const student = {name:"Gopal",rollNo:2}
+// console.log(student.rollNo)
+//In Case of Object we can only use string and symble as Key name
+// console.log(student["rollNo"])
+
+//Maps
+// const person = new Map()
+// person.set("Name" ,"Gopal")
+// person.set([1,2,3],"One Two Three")
+// person.set(1,"One")
+// person.set({id:20,name:"Gopal"},"Id and Name")
+// const student = {name:"Gopal",rollNo:2}
+//In Case of Object we can only use string and symble as Key name
+//  console.log(person)
+ //How to acces value
+//  const personName = person.get("Name")
+//  console.log(personName)
+
+// for (const key of person.keys()) {
+//     console.log(key, typeof(key))
+// }
+// for (const [key,value] of person) {
+//     // console.log(key, Array.isArray(key))
+//     console.log(key,value)
+// }
+// Order is Garanted in map
+
+// const person = new Map([["Name","Gopal"],["Age",22],["Gander","Male"]])
+// for (let [key,value] of person) {
+//     console.log(key,value)
+// }
+
+// const person1 ={
+//     id: 1,
+//     firstName: "Gopal"
+// }
+
+// const extraInfo = new Map()
+// extraInfo.set(person1,{age:22,gender:"Male"})
+// const gender = extraInfo.get(person1).gender
+// console.log(gender)
+
+//Clone Using Object.assign
+
+// const numbers = {
+//        one:1,
+//        two:2,
+//        three:3
+// }
+
+// const numbers2 = {...numbers} //Cloning object
+// const numbers2 = Object.assign({},numbers) //Cloning object
+//New Method
+
+// numbers.four = 4;
+// console.log(numbers2)
+// let user;
+// const user =  {
+//     name:"Gopal",
+//     luckyNumbars:[2,6,98],
+//     address:{
+//         State:"WestBengal",
+//         Pin:443356,
+//         Landmark:"Near High School"
+//     }
+
+// }
+// console.log(user?.name)
+// console.log(user?.address?.Pin) //If Address doesn't Exist it will throw error
+// to handle the error we have to inclue question mark to check
+
+//✅ Methods
+
+//Works in function inside object
+
+// const nameAge = ()=>{
+//     console.log(`My name is ${this.name}and age is ${this.age}`)
+// }
+// const person1 ={
+//    name:"Gopal",
+//    age:22,
+//    about: nameAge
+// }
+// const person2 ={
+//    name:"Sujit",
+//    age:23,
+//    about: nameAge
+// }
+// person1.about()
+//✅ This Keyword
+// console.log(this)  //This and Window is same
+// console.log(window)
+// function myFunc(){
+//     "use strict"  // You Don't Giving Window objcet acces
+//     console.log(this)
+// }
+// myFunc()
+
+//✅ Call Apply Bind
+// function hello(){
+//    console.log("Hello World")
+// }
+// function gopal(){
+//     console.log("My name is Gopal")
+// }
+// hello.call()
+// hello.apply()
+// hello.bind()
+// const about = function(hobby,favGame){
+//     console.log(this.firstName, this.age,hobby,favGame)
+//   }
+// const user1={
+//       firstName: "Gopal",
+//       age:22, 
+// }
+// user1.about()
+// const user2={
+//       firstName: "Mohit",
+//       age:29,
+      
+// }
+// user1.about.call()//If we use .call we must have to pass paramiter or this
+// user1.about.call(user2,"Programing","BGMI") //call for user2 next Arguments
+// user1.about.call(user2,"Programing","BGMI") 
+
+//Don't Do this Mistake
+// const user1={
+//     firstName: "Gopal",
+//     age:22, 
+//     about : function(){
+//   console.log(this.firstName, this.age)
+// }
+// }
+
+// const func = user1.about
+// const func = user1.about.bind(user1) //We have to use bind method to do so
+
+// func() //Don't work because it don't have this referece as we want
+// It has window as a this reference
+
+
+//✅ Arrow function and this
+// const user1={
+//     firstName: "Gopal",
+//     age:22, 
+//     about : ()=>{
+//   console.log(this.firstName, this.age)
+// }
+// }
+// user1.about()  // Arrow function this will take reference from one level up this in that case is window object
+// We can also create method like this
+// const user2={
+//     firstName: "Mohit",
+//     age:29, 
+//     about(){
+//   console.log(this.firstName, this.age)
+// }
+// }
+//✅ OOP (Object Oriented Programing)
+
+//Proto,Protype,Classes
+//This is hard core
+// const user1 = {
+//     firstName: "Gopal",
+//     lastName:"Kumar",
+//     email:"testemail@email.com",
+//     age:22,
+//     address: "House Number, Colony, Pincode,state",
+//     about(){
+//         return `${this.firstName} is ${this.age} years old `
+//     },
+//     is18(){
+//        return this.age >= 18;
+//     }
+// }
+
+//What if we have to create this object million times we have to approch oop
+
+//function that creates object 
+//add key value pair
+//and return that object
+
+const userMethods = { 
+    about(){
+    return `${this.firstName} is ${this.age} years old `
+},
+    is18(){
+    return this.age >= 18;
+ }
+}
+function userCreater(firstName,lastName,email,age,address,){
+       const user = {};
+       user.firstName = firstName;
+       user.lastName = lastName;
+       user.email = email;
+       user.age = age;
+       user.about = userMethods.about
+       user.is18 = userMethods.is18
+      return user
+}
+const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+//We have to create method outside to speed up code 
+console.log(user1.about())
+
+//9.28.00
