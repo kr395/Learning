@@ -1356,6 +1356,30 @@
 //add key value pair
 //and return that object
 
+// const userMethods = { 
+//     about(){
+//     return `${this.firstName} is ${this.age} years old `
+// },
+//     is18(){
+//     return this.age >= 18;
+//  }
+// }
+// function userCreater(firstName,lastName,email,age,address,){
+//        const user = {};
+//        user.firstName = firstName;
+//        user.lastName = lastName;
+//        user.email = email;
+//        user.age = age;
+//        user.about = userMethods.about
+//        user.is18 = userMethods.is18
+//       return user
+// }
+// const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+//We have to create method outside to speed up code 
+// console.log(user1.about())
+
+
+// If we have to create multiple Methods
 const userMethods = { 
     about(){
     return `${this.firstName} is ${this.age} years old `
@@ -1370,12 +1394,30 @@ function userCreater(firstName,lastName,email,age,address,){
        user.lastName = lastName;
        user.email = email;
        user.age = age;
-       user.about = userMethods.about
-       user.is18 = userMethods.is18
-      return user
+       user.address = address;
+       user.about = userMethods.about ;
+       user.is18 = userMethods.is18 ;
+      return user;
 }
 const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
-//We have to create method outside to speed up code 
+const user2 = userCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
+// We have to create method outside to speed up code 
 console.log(user1.about())
+console.log(user2.about())
 
-//9.28.00
+const obj1 = {
+    key1:"Value1",
+    key2:"Value2",
+    key3:"Value3",
+}
+const obj2 = {
+  
+    key3:"Value3",
+}
+//Another way to create blank blank object
+const obj3 = Object.create(obj1)
+obj3.key3 = "Unique"
+console.log(obj3.key2)
+//What if we have to take key 1 in obj2 as reference if it don't has
+console.log(obj3)
+//Prototype property also is a deferent topic
