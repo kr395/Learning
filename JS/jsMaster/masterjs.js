@@ -1377,47 +1377,102 @@
 // const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
 //We have to create method outside to speed up code 
 // console.log(user1.about())
-
+// const obj1 = {
+//     key1:"Value1",
+//     key2:"Value2",
+//     key3:"Value3",
+// }
+// const obj2 = {
+  
+//     key3:"Value3",
+// }
+//Another way to create blank blank object
+// const obj3 = Object.create(obj1)
+// obj3.key3 = "Unique"
+// console.log(obj3.key2)
+//What if we have to take key 1 in obj2 as reference if it don't has
+// console.log(obj3)
+//Prototype property also is a deferent topic
 
 // If we have to create multiple Methods
-const userMethods = { 
-    about(){
-    return `${this.firstName} is ${this.age} years old `
-},
-    is18(){
-    return this.age >= 18;
- }
-}
-function userCreater(firstName,lastName,email,age,address,){
-       const user = {};
-       user.firstName = firstName;
-       user.lastName = lastName;
-       user.email = email;
-       user.age = age;
-       user.address = address;
-       user.about = userMethods.about ;
-       user.is18 = userMethods.is18 ;
-      return user;
-}
-const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
-const user2 = userCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
-// We have to create method outside to speed up code 
-console.log(user1.about())
-console.log(user2.about())
+// const userMethods = { 
+//     about(){
+//     return `${this.firstName} is ${this.age} years old `
+// },
+//     is18(){
+//     return this.age >= 18;
+//  }
+// }
+// function userCreater(firstName,lastName,email,age,address,){
+//        const user = Object.create(userMethods);
+//        user.firstName = firstName;
+//        user.lastName = lastName;
+//        user.email = email;
+//        user.age = age;
+//        user.address = address
+//       return user;
+// }
+// const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+// const user2 = userCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
+// // We have to create method outside to speed up code 
+// console.log(user1.about())
+// console.log(user2.about())
 
-const obj1 = {
-    key1:"Value1",
-    key2:"Value2",
-    key3:"Value3",
+//✅ Prototype property 
+//We can treat function as a objcet
+// function hello(){
+//     console.log("Hello")
+// }
+// console.log(typeof(hello))
+// console.log(hello.name)  //Name is a function property
+// //Fucntion provides many usefull properties
+// //Fuction gives us a free space which is prototype
+// //Prototype is like free blank object
+// hello.myProperty ="It's My Property Value" // We are assinging value like objects
+// console.log(typeof(hello.myProperty)) 
+// hello.prototype.name = "Gopal"
+// hello.prototype.prototpeFunction = function(){
+//     return  "I am from protype funciton"
+// }
+
+// console.log(hello.prototype) // Only fucntion provides prototype property
+
+//✅ User Prototype
+// function userCreater(firstName,lastName,email,age,address,){
+//        const user = Object.create(userCreater.prototype);
+//        user.firstName = firstName;
+//        user.lastName = lastName;
+//        user.email = email;
+//        user.age = age;
+//        user.address = address
+//       return user;
+// }
+// userCreater.prototype.about =  function(){
+//     return `${this.firstName} is ${this.age} years old `
+// },
+// userCreater.prototype.is18 = function(){
+//     return this.age >= 18;
+//  }
+// console.log(userCreater.prototype)
+
+// const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+// const user2 = userCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
+
+// console.log(user1.about())
+// console.log(user2.is18())
+
+
+//✅ New Keyword
+
+function createUser(firstName,age){
+    this.firstName = firstName;
+    this.age = age;
 }
-const obj2 = {
-  
-    key3:"Value3",
-}
-//Another way to create blank blank object
-const obj3 = Object.create(obj1)
-obj3.key3 = "Unique"
-console.log(obj3.key2)
-//What if we have to take key 1 in obj2 as reference if it don't has
-console.log(obj3)
-//Prototype property also is a deferent topic
+
+
+const user1 = new createUser("Gopal",22)
+//What new keyword doing
+// 1.Create Empty Object {}    Value = this
+// 2. return empty object
+// 3. automatically create proto and assings in it
+// 10.08
