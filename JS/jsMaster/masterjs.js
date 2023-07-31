@@ -1652,37 +1652,39 @@
 
 //✅ static methods and properties
 
-class person{
-     constructor(firstName,lastName,age){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-     }
+// class person{
+//      constructor(firstName,lastName,age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//      }
 
-     get fullName(){
-        return `${this.firstName} ${this.lastName}`
-     }
-   // How we can use this function as a property
-   // Use get keyword  to make method as property
-   // get keyword internally call the method 
+//      get fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//      }
+//    // How we can use this function as a property
+//    // Use get keyword  to make method as property
+//    // get keyword internally call the method 
 
-    set fullName(fullName){
-        const [firstName,lastName] = fullName.split(" ")
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-    // using static keyword we set methods on class level
-    static info(){
-        return this.name
-    }
-}
+//     set fullName(fullName){
+//         const [firstName,lastName] = fullName.split(" ")
+//         this.firstName = firstName
+//         this.lastName = lastName
+//     }
+//     // using static keyword we set methods on class level
+//     static info(){
+//         return this.name
+//     }
+// }
 
-const person1 = new person("Sujit", "Das",23)
-console.log(person1.fullName)  
+// const person1 = new person("Sujit", "Das",23)
+// console.log(person1.fullName)  
 // all methods are object releted
 // How can we set as a class releted function
 // To do so use static keyword
 // Static Propertys
+
+
 
 
 
