@@ -850,14 +850,14 @@
 // function details({name,age=18,gender="Blank"}){ //Destructuring Objcet in paramiter
 //    console.log(`Hello ${name} You are ${age} and your gender is ${gender} `)
 // }
-// details(person) // person gives above function an objcet 
+// details(person) // person gives above function an objcet
 
 // ✅ callback Functions
 
 // function myFunc(callback){ //callback is a function as param
 // //    console.log(a)
 //  callback()
-  
+
 // }
 
 // function myFunc2(){
@@ -920,9 +920,9 @@
 //     {name:"Mohit",age:29},
 //     {name:"Gulshan",age:25}
 // ]
-// //For Each is like a loop 
+// //For Each is like a loop
 // users.forEach(function(obj,index){ //This is anonomus function means it has no name
-//         console.log(`User ${index} name is ${obj.name}`)   
+//         console.log(`User ${index} name is ${obj.name}`)
 // })
 
 // ✅ Map Method
@@ -954,7 +954,6 @@
 // })
 // console.log(moreThan5)
 
-
 // ✅ Reduce Method
 // const numbers = [1,4,6,8,9,5,1,3]
 
@@ -976,7 +975,7 @@
 //     {productId: 2, ProductName:"Mobile",price: 35000},
 //     {productId: 3, ProductName:"pen",price: 25},
 //     {productId: 4, ProductName:"Zins",price: 600},
-// ] 
+// ]
 // const totalAmmount = userCart.reduce((accumulator,CurrentValue)=>{
 //        return accumulator + CurrentValue.price
 // },0)
@@ -988,7 +987,7 @@
 // const numbers = [1200,3,89,5,6,4,7,85]
 // const names = ["gopal","mohit"]
 // numbers.sort()  //Sort method trit this array as string ["1","3"]
-// names.sort() 
+// names.sort()
 // console.log(numbers)
 // console.log(names)
 
@@ -1000,9 +999,9 @@
 //For example
 // 1200 and 3
 // a = 1200 and b= 3
-// return  a - b = 1200 - 3 = positive value 
-// if returns positive value b will appare first 
-//for oposite situation (for desending value)b - a = negetive value the a will appeare first 
+// return  a - b = 1200 - 3 = positive value
+// if returns positive value b will appare first
+//for oposite situation (for desending value)b - a = negetive value the a will appeare first
 
 //Realistic Example
 // Price low To High
@@ -1025,7 +1024,7 @@
 // })
 // console.log(low_high)
 
-// ✅ find Method 
+// ✅ find Method
 
 // const names = ["Gopal","Sujit","Ajit","Montosh"]
 
@@ -1036,7 +1035,7 @@
 // names.find(isLength5)
 // // console.log(isLength5("Gopal"))
 // console.log(names.find(isLength5)) //Only return once first value and stoped
-// find method 
+// find method
 // const name4Letter= names.find((name)=>{
 //        return name.length === 4
 // })
@@ -1091,8 +1090,8 @@
 // const checkG5 = numbers.some((number)=>number <= 5)
 // console.log(checkG5)
 // const products =[
-    //     {productId:1,productName:"Smart Watch",price:2900},
-    //     {productId:2,productName:"Smart Watch",price:1900},
+//     {productId:1,productName:"Smart Watch",price:2900},
+//     {productId:2,productName:"Smart Watch",price:1900},
 //     {productId:3,productName:"Smart Watch",price:499},
 //     {productId:3,productName:"Smart Watch",price:500},
 //     {productId:3,productName:"Smart Watch",price:200},
@@ -1117,7 +1116,7 @@
 // const names = ["Gopal","Sujit","Suman"]
 // const deleted = names.splice(1,1,"Rabi")
 // console.log(names)
-// console.log(deleted) 
+// console.log(deleted)
 
 // Ctrl + Shift + o  - to find function and variable
 //Ctrl + G - Go to line number
@@ -1136,13 +1135,13 @@
 //      console.log(number * 2)
 // }
 
-// array like object 
+// array like object
 // const employ = {empId:3211,empName:"Gopal",Sallary:50000}
 //Object isn't iterables
 // array like object has length propery
-//We can acces using index number 
+//We can acces using index number
 
-// String is a Arry Like Object 
+// String is a Arry Like Object
 
 // ✅ Sets object
 // Set Don't Allow Duplicate Values
@@ -1188,7 +1187,7 @@
 // const student = {name:"Gopal",rollNo:2}
 //In Case of Object we can only use string and symble as Key name
 //  console.log(person)
- //How to acces value
+//How to acces value
 //  const personName = person.get("Name")
 //  console.log(personName)
 
@@ -1287,22 +1286,22 @@
 //   }
 // const user1={
 //       firstName: "Gopal",
-//       age:22, 
+//       age:22,
 // }
 // user1.about()
 // const user2={
 //       firstName: "Mohit",
 //       age:29,
-      
+
 // }
 // user1.about.call()//If we use .call we must have to pass paramiter or this
 // user1.about.call(user2,"Programing","BGMI") //call for user2 next Arguments
-// user1.about.call(user2,"Programing","BGMI") 
+// user1.about.call(user2,"Programing","BGMI")
 
 //Don't Do this Mistake
 // const user1={
 //     firstName: "Gopal",
-//     age:22, 
+//     age:22,
 //     about : function(){
 //   console.log(this.firstName, this.age)
 // }
@@ -1314,11 +1313,10 @@
 // func() //Don't work because it don't have this referece as we want
 // It has window as a this reference
 
-
 //✅ Arrow function and this
 // const user1={
 //     firstName: "Gopal",
-//     age:22, 
+//     age:22,
 //     about : ()=>{
 //   console.log(this.firstName, this.age)
 // }
@@ -1327,7 +1325,7 @@
 // We can also create method like this
 // const user2={
 //     firstName: "Mohit",
-//     age:29, 
+//     age:29,
 //     about(){
 //   console.log(this.firstName, this.age)
 // }
@@ -1352,11 +1350,11 @@
 
 //What if we have to create this object million times we have to approch oop
 
-//function that creates object 
+//function that creates object
 //add key value pair
 //and return that object
 
-// const userMethods = { 
+// const userMethods = {
 //     about(){
 //     return `${this.firstName} is ${this.age} years old `
 // },
@@ -1375,7 +1373,7 @@
 //       return user
 // }
 // const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
-//We have to create method outside to speed up code 
+//We have to create method outside to speed up code
 // console.log(user1.about())
 // const obj1 = {
 //     key1:"Value1",
@@ -1383,7 +1381,7 @@
 //     key3:"Value3",
 // }
 // const obj2 = {
-  
+
 //     key3:"Value3",
 // }
 //Another way to create blank blank object
@@ -1395,7 +1393,7 @@
 //Prototype property also is a deferent topic
 
 // If we have to create multiple Methods
-// const userMethods = { 
+// const userMethods = {
 //     about(){
 //     return `${this.firstName} is ${this.age} years old `
 // },
@@ -1414,11 +1412,11 @@
 // }
 // const user1 = userCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
 // const user2 = userCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
-// // We have to create method outside to speed up code 
+// // We have to create method outside to speed up code
 // console.log(user1.about())
 // console.log(user2.about())
 
-//✅ Prototype property 
+//✅ Prototype property
 //We can treat function as a objcet
 // function hello(){
 //     console.log("Hello")
@@ -1429,7 +1427,7 @@
 // //Fuction gives us a free space which is prototype
 // //Prototype is like free blank object
 // hello.myProperty ="It's My Property Value" // We are assinging value like objects
-// console.log(typeof(hello.myProperty)) 
+// console.log(typeof(hello.myProperty))
 // hello.prototype.name = "Gopal"
 // hello.prototype.prototpeFunction = function(){
 //     return  "I am from protype funciton"
@@ -1461,18 +1459,230 @@
 // console.log(user1.about())
 // console.log(user2.is18())
 
-
 //✅ New Keyword
 
-function createUser(firstName,age){
-    this.firstName = firstName;
-    this.age = age;
-}
+// function createUser(firstName,age){
+//     this.firstName = firstName;
+//     this.age = age;
+// }
 
-
-const user1 = new createUser("Gopal",22)
+// const user9 = new createUser("Gopal",22)
 //What new keyword doing
 // 1.Create Empty Object {}    Value = this
 // 2. return empty object
 // 3. automatically create proto and assings in it
-// 10.08
+
+// Previous task using new Keyword
+// If we use this type of function with new Keyword
+// We can start it's name with Capital latter to identify it
+// and to avoid error
+// function UserCreater(firstName,lastName,email,age,address,){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+//     this.age = age;
+//     this.address = address
+// }
+// UserCreater.prototype.about =  function(){
+//  return `${this.firstName} is ${this.age} years old `
+// },
+// UserCreater.prototype.is18 = function(){
+//  return this.age >= 18;
+// }
+// console.log(UserCreater.prototype)
+
+// const user1 = new UserCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+// const user2 = new UserCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
+// //What new keyword doing
+// // 1.Create Empty Object {}    Value = this
+// // 2. return empty object
+// // 3. automatically create proto and assings in it
+// console.log(user1.about())
+// console.log(user2.is18())
+
+// This is a construtar function it creates Users Object
+// function UserCreater(firstName,lastName,email,age,address,){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+//     this.age = age;
+//     this.address = address
+// }
+// UserCreater.prototype.about =  function(){
+//  return `${this.firstName} is ${this.age} years old `
+// },
+// UserCreater.prototype.is18 = function(){
+//  return this.age >= 18;
+// }
+
+// const user1 = new UserCreater("Gopal","Kumar","testemail@email.com",22,"Gurugram")
+// const user2 = new UserCreater("Mohit","Kumar","testemail2@email.com",29,"Gurugram")
+// //What new keyword doing
+// // 1.Create Empty Object {}    Value = this
+// // 2. return empty object
+// // 3. automatically create proto and assings in it
+// for (const key in user1) {
+// //  console.log(key)
+//  // It will log all key including existing in protype
+// }
+// // What if we don't want to log this
+// for (const key in user1) {
+//     if (user1.hasOwnProperty(key)) {
+//         console.log(key)
+
+//     }
+// }
+
+//✅ More About Prototype
+// We see many methods in array and other elements
+// How they get these methods
+// The Answer is they get methods from Array prototype
+// let numbers =[1,2,3]
+// console.log(Object.getPrototypeOf(numbers))
+// console.log(numbers)
+// let numbers2 = new Array(1,2,5)
+// console.log(Array.prototype)
+
+//✅ Class Keyword
+// Classes are fake because it works internally like above
+// How we use class Keyword
+
+// class UserCreater {
+//   constructor(firstName,lastName,email,age,address) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+//     this.age = age;
+//     this.address = address;
+//   }
+//  // We have to declare methods here
+//   about(){
+//     return `${this.firstName} is ${this.age} years old `;
+//   }
+//   is18(){
+//     return this.age >= 18;
+//   }
+  
+// }
+
+// const user1 = new UserCreater(
+//   "Gopal",
+//   "Kumar",
+//   "testemail@email.com",
+//   22,
+//   "Gurugram"
+// );
+// const user2 = new UserCreater(
+//   "Mohit",
+//   "Kumar",
+//   "testemail2@email.com",
+//   29,
+//   "Gurugram"
+// );
+// console.log(Object.getOwnPropertyNames(user1))
+
+// Class Practice
+
+// class Animal{
+//     constructor(name,age){
+//       this.name = name;
+//       this.age = age;
+//     }
+//     eat(food){
+//        return `${this.name} Eats ${food}`
+//     }
+
+// }
+
+// const dog = new Animal("Tomy",3)
+// const cat = new Animal("Pussy",2)
+
+// console.log(dog.eat("Bone"))
+// console.log(cat.eat("Fish"))
+
+// //extends Keyword
+// // Object is called instence in other Programing language
+// class Dog extends Animal{
+//     constructor(name,age,speed){
+//         super(name,age) // it gives this data to parent
+//         this.speed = speed
+//     }
+
+//     drink(a){
+//         return `${this.name}'s Speed is ${this.speed} He Drinks ${a}`
+//     }
+
+// }
+// // Dog is a subclass and Animal is a base or parent class
+// const tommy = new Dog("Tommy",3)
+// console.log(tommy)
+// const bob = new Dog("Bob",1,"30km/h")
+// console.log(bob.drink("Water"))
+// We can create same methods in child class to modyfy those methods
+// According to need 
+
+//✅ getter and setters
+
+// class person{
+//      constructor(firstName,lastName,age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//      }
+
+//      get fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//      }
+//    // How we can use this function as a property
+//    // Use get keyword  to make method as property
+//    // get keyword internally call the method 
+
+//     set fullName(fullName){
+//         const [firstName,lastName] = fullName.split(" ")
+//         this.firstName = firstName
+//         this.lastName = lastName
+//     }
+// }
+// const person1 = new person("Gopal","Kumar Das",22)
+// console.log(person1.fullName)
+// // How we can change full Name using Full Name property
+
+// person1.fullName = "Mohit Kumar Das"
+// console.log(person1.fullName)
+
+//✅ static methods and properties
+
+class person{
+     constructor(firstName,lastName,age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+     }
+
+     get fullName(){
+        return `${this.firstName} ${this.lastName}`
+     }
+   // How we can use this function as a property
+   // Use get keyword  to make method as property
+   // get keyword internally call the method 
+
+    set fullName(fullName){
+        const [firstName,lastName] = fullName.split(" ")
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+    // using static keyword we set methods on class level
+    static info(){
+        return this.name
+    }
+}
+
+const person1 = new person("Sujit", "Das",23)
+console.log(person1.fullName)  
+// all methods are object releted
+// How can we set as a class releted function
+// To do so use static keyword
+// Static Propertys
+
+
+
