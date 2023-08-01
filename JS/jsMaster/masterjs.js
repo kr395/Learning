@@ -1733,18 +1733,110 @@
 
 // ✅ Function Execution Context
 
-let foo = "foo";
-console.log(foo);
-function getFullName(firstName, lastName) {
-  console.log(arguments);
-  let myVar = "Var inside func";
-  console.log(myVar);
-  const fullName = firstName + " " + lastName;
-  return fullName;
-}
+// let foo = "foo";
+// console.log(foo);
+// function getFullName(firstName, lastName) { // firstName is a paramiter
+//   console.log(arguments);
+//   let myVar = "Var inside func";
+//   console.log(myVar);
+//   const fullName = firstName + " " + lastName;
+//   return fullName;
+// }
 
-const person1 = getFullName("Gopal","Kumar Das");
-//By calling this function  Js creates new function Execution Context
-console.log(person1)
+// const person1 = getFullName("Gopal","Kumar Das");
+// //By calling this function  Js creates new function Execution Context
+// console.log(person1)
+// //  JS maintain Stack state  - Using Call Stack
 
-//  JS maintain Stack state  - Using Call Stack
+// ✅ Closures
+// Closures - when inner function returned it can take value from
+//  it's outer function arguments in local memory
+//function can return function
+
+// function myFunc(){
+//     // return "Gopal"
+//     // return [5,1,6]
+//     // return { key1:"Value1",}
+//     function newFunc(){
+//         console.log("Gopal")
+//     }
+//     return newFunc
+// }
+// const ans = myFunc() // Return new Func and store the function in ans varibale
+// ans()
+
+// function nameAge(name,age=0){
+//     // return "Gopal"
+//     // return [5,1,6]
+//     // return { key1:"Value1",}
+//     function newFunc(){
+//         console.log(`I am ${name} and I am ${age}`)
+//     }
+//     return newFunc // it returns with it's parent variales name and age
+// }
+// const ans = nameAge("Gopal", 22) // Return new Func and store the function in ans varibale
+// ans()
+
+// function hello(X){
+//     const a = "varA"
+//     const b = "varB"
+//     return function(){
+//         console.log(a,b,X)
+//     }
+// }
+
+// const info = hello([1,56,86])
+// info()
+
+// 1.First create Global Exicution context
+//    Memory Creation phase
+// set this value to window
+// set window to window
+//  check all variable and function and stores to local memory info = uniniitilize
+// save hello function in local memory
+// next call hello function and start Function Execution context
+//   check and store data of Argumnets
+//   Now shifted in FEC along with Gec set value of  take value of X a, b after that return
+//  the function along with all nececry variable and argument value
+//  then it will close from Call stack
+//  Cooming back to GEC calls info function  to create another FEC
+// then it evaluate it's value
+//  Then Close the GEC
+
+// ✅ Task
+
+// function calc(times = 0) {
+//   return function (number = 0) {
+    //     number = number ** times;
+    //     console.log(number);
+    //   };
+    // }
+    
+    // const squre = calc(2);
+    // squre(6);
+    
+    // Shorting Function
+    // const calc =(power)=> (number)=> number ** power
+    // const squre = calc(2)
+    // console.log(squre(5))
+    
+    // ✅ Task
+
+// function myFunc(){
+//     let counter = 0;
+//     return function(){
+//         if (counter == 0) {
+//             console.log("You called me")
+//             counter++
+//         } else {
+//             console.log("Already called")
+//         }
+        
+//     }
+// }
+
+// const result = myFunc()
+// result()
+// result()
+
+    
