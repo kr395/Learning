@@ -1562,7 +1562,7 @@
 //   is18(){
 //     return this.age >= 18;
 //   }
-  
+
 // }
 
 // const user1 = new UserCreater(
@@ -1619,7 +1619,7 @@
 // const bob = new Dog("Bob",1,"30km/h")
 // console.log(bob.drink("Water"))
 // We can create same methods in child class to modyfy those methods
-// According to need 
+// According to need
 
 //✅ getter and setters
 
@@ -1635,7 +1635,7 @@
 //      }
 //    // How we can use this function as a property
 //    // Use get keyword  to make method as property
-//    // get keyword internally call the method 
+//    // get keyword internally call the method
 
 //     set fullName(fullName){
 //         const [firstName,lastName] = fullName.split(" ")
@@ -1664,7 +1664,7 @@
 //      }
 //    // How we can use this function as a property
 //    // Use get keyword  to make method as property
-//    // get keyword internally call the method 
+//    // get keyword internally call the method
 
 //     set fullName(fullName){
 //         const [firstName,lastName] = fullName.split(" ")
@@ -1678,13 +1678,73 @@
 // }
 
 // const person1 = new person("Sujit", "Das",23)
-// console.log(person1.fullName)  
+// console.log(person1.fullName)
 // all methods are object releted
 // How can we set as a class releted function
 // To do so use static keyword
 // Static Propertys
 
+//✅ How Javascript Works
+// JS will compile code then runs
+//  JS is a Synchronous Programing Language
+//  If a line not exicuted it don't go to next language
+//  Browser Provide JS Asynchronous Behabe
+// console.log(this)
+// console.log(window)
+// console.log(firstName)
+// var firstName = "Gopal" // firstName variable in global scope
+// console.log(firstName)
 
+// How Js runs steps
+//  A. Compile
+// 1. Tokenizing/Lexing - Divided into small chunks
+// 2.Parsing  -  to check Early Error Checking and What is Apropriate scope of Variables
+// 3.Code Generation
+// B.Code Exicute  - To exicute code JS creates Exicution Context
+//  It's Called - Global Exicution Context
+// 2.Determining Apropriate scope of Variabl
 
+//  When Global Exicution Context Creates
+// Global Exicution Context store memory stack by stack
+// 1. Sets value of this
+// 2. Set all Variable value created using Var Keyword
+// 3. storing evry value in object
+// console.log(this);
+// console.log(window); // Browser provides window object
+// console.log(myFunction);
+// //✅ We are able to acces fullName and myFunciton Because of Hoisting
+// myFunction() // only runs if we create function using function keyword
+// console.log(fullName);
 
+// var myFunction = function(){  // Changing it to Function Expression
+//     console.log("This is my function")
+// }
+// var firstName = "Gopal"
+// var lastName = "Kumar Das"
+// var fullName = firstName + " " + lastName
+// console.log(fullName)
+// //  When All line exicuted GEC will deleted and
+// // Current Exicution context will on top of stack
 
+// If we create variable Let or Const we have to
+// Let and const also hoisted but only works if we inilisize it.
+
+// We learnt about Global Exicution Context till now
+
+// ✅ Function Execution Context
+
+let foo = "foo";
+console.log(foo);
+function getFullName(firstName, lastName) {
+  console.log(arguments);
+  let myVar = "Var inside func";
+  console.log(myVar);
+  const fullName = firstName + " " + lastName;
+  return fullName;
+}
+
+const person1 = getFullName("Gopal","Kumar Das");
+//By calling this function  Js creates new function Execution Context
+console.log(person1)
+
+//  JS maintain Stack state  - Using Call Stack
