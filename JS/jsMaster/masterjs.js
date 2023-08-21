@@ -1744,7 +1744,7 @@
 // }
 
 // const person1 = getFullName("Gopal","Kumar Das");
-// //By calling this function  Js creates new function Execution Context
+//By calling this function  Js creates new function Execution Context
 // console.log(person1)
 // //  JS maintain Stack state  - Using Call Stack
 
@@ -1755,7 +1755,7 @@
 
 // function myFunc(){
 //     // return "Gopal"
-//     // return [5,1,6]
+//     // return  [5,1,6]
 //     // return { key1:"Value1",}
 //     function newFunc(){
 //         console.log("Gopal")
@@ -1838,5 +1838,9 @@
 // const result = myFunc()
 // result()
 // result()
+
+
+
+
 
     
