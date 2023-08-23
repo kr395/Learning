@@ -108,5 +108,30 @@
   
 // })
 
-//  2nd Video 6.00.00
+//  Clone Nodes
+// const list = document.querySelectorAll('li')
+// console.log(list)
+// const li = document.createElement('li')
+// console.log(li.cloneNode(true))
+
+//;🔥 static list vs live list
+// const ul = document.querySelector('ul')
+// const list = document.querySelectorAll('li')
+// const li = document.createElement('li')
+// //  Node list is static, HTML Collection is live list
+// li.textContent= 'hello5'
+// ul.append(li)
+// console.log()
+
+//;🔥 how to get the dimension of element
+
+// const ul = document.querySelector('ul')
+
+// const ulDimen = ul.getBoundingClientRect()
+// console.log(ulDimen)
+
+// 🔥 Event
+// the value of this chenges on arrow function and anonomus funcion
+
+//  Video = 6.45.00
 
