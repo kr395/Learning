@@ -63,7 +63,6 @@
 // const heading = div.querySelector('#head')
 // console.log(heading)
 
-
 // 🔥 ClassList
 
 // const Lis = document.querySelectorAll('li');
@@ -72,11 +71,10 @@
 // for (const li of Lis) {
 //     li.classList.add('newClass')
 //     li.classList.toggle('newClass')
-   
+
 // }
 
 // console.log(Lis);
-
 
 //  🔥 Small Todo task
 
@@ -105,7 +103,7 @@
 //     // createdBtns.addEventListener('click',(e)=>{
 //     //       console.log(createdBtns)
 //     // })
-  
+
 // })
 
 //  Clone Nodes
@@ -133,5 +131,49 @@
 // 🔥 Event
 // the value of this chenges on arrow function and anonomus funcion
 
-//  Video = 6.45.00
+// const buttons = document.querySelectorAll('.button')
+// buttons.forEach((button)=>{
+//     button.addEventListener('click',function(){
+//         this.style.color = 'gray'
+//         this.style.backgroundColor = 'yellow'
+//     })
+// })
+//  Event bubbling and Event Capturing
+const body = document.body;
+const grandP = document.querySelector(".grandparent");
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
+
+// body.addEventListener("click", () => {
+//   console.log("You clicked on body");
+// });
+// grandP.addEventListener("click", () => {
+//   console.log("You clicked on grandparent");
+// });
+// parent.addEventListener("click", () => {
+//   console.log("You clicked on parent");
+// });
+// child.addEventListener("click", () => {
+//   console.log("You clicked on chlid");
+// });
+
+// Capturing Events
+
+// body.addEventListener("click", () => {
+//     console.log("Captured!!! You clicked on body");
+//   },true);
+//   grandP.addEventListener("click", () => {
+//     console.log("Captured!!! You clicked on grandparent");
+//   },true);
+//   parent.addEventListener("click", () => {
+//     console.log("Captured!!! You clicked on parent");
+//   },true);
+//   child.addEventListener("click", () => {
+//     console.log("Captured!!! You clicked on chlid");
+//   },true);
+
+// grandP.addEventListener("click", (e) => {
+//    console.log(e.target)
+// });
+
 
