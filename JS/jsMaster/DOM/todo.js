@@ -12,26 +12,35 @@ form.addEventListener("submit", (e) => {
   if (inputFild.value == "") {
     window.alert("Give a task name");
   } else {
-    let htmlText = `<div id=\"task-div\"><span class=\"task-name\"></span><input type=\"button\" value=\"✔\" id=\"done-btn\" /><input type=\"button\" value=\"❌\" id=\"remove-btn\" /></div>`;
-    todoFild.appendChild(Node(htmlText));
-    const spanTaskName = document.querySelector(".task-name");
-    let taskName = inputFild.value;
-    spanTaskName.textContent = taskName;
+    const taskName = inputFild.value;
+    const newDiv = document.createElement("div");
+    let newHTML = `<ul class="task-div">
+    <span class="task-name">${taskName}</span>
+    <input type="button" value="✔" class="done-btn" />
+    <input type="button" value="❌" class="remove-btn" />
+  </ul>`;
+    newDiv.innerHTML = newHTML;
+    todoFild.append(newDiv);
     inputFild.value = "";
-
   }
 });
-const doneBtn = document.querySelector("#done-btn");
-const removeBtn = document.querySelector("#remove-btn");
-if (doneBtn === null) {
-} else {
-}
-
-// if (!doneBtn) {
-//     return
-// } else {
-//     doneBtn.addEventListener('click',(e)=>{
-//         console.log(e.target)
-//     })
-
-// }
+// console.log(todoFild.parentNode)
+let count ;
+todoFild.addEventListener("click", (e) => {
+  if (e.target.classList.contains("done-btn")) {
+      if (count == 1) {
+        const divChildrens = e.target.parentNode.childNodes;
+        divChildrens[1].style.textDecoration = 'none';
+        count = 0;
+      } else{ 
+        const divChildrens = e.target.parentNode.childNodes;
+        divChildrens[1].style.textDecoration = 'line-through';
+        count = 1;
+      }
+  }
+  if (e.target.classList.contains("remove-btn")) {
+     const divNode = e.target.parentNode;
+     divNode.remove(true)
+     divNode.style.padding = '0'
+  }
+});

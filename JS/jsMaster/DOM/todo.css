@@ -17,19 +17,21 @@
   }
   
   .todo-fild{
-    min-width: auto;
+    width: auto;
+    height: min-content;
     background-color: bisque;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
-    align-items:  flex-end;
+    align-items: center;
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 5px;
+
   }
   
-  .todo-fild #task-div{
-     width: 100%;
+.task-div{
+     width:220px;
      height: 30px;
      background-color: rgb(192, 192, 240);
      display: flex;
@@ -37,7 +39,7 @@
      padding: 0.5rem;
      border-radius: 5px;
   }
-   #task-div :nth-child(1){
+  .task-name{
     flex-grow: 1;
     font-weight: bold;
   }
@@ -49,9 +51,10 @@
      padding: 0.5rem;
      border-radius: 10px;
      margin-right: 2px;
+     
   }
   
-  #submit-btn,#done-btn,#remove-btn{
+  #submit-btn,.done-btn,.remove-btn{
     width: 25px;
     height: 25px;
     background-color: rgb(107, 201, 166);
