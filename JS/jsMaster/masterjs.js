@@ -1840,7 +1840,118 @@
 // result()
 
 
+//  Video 3
+
+// JS is a Synchronous Programming and single threted
+// console.log('Script Started')
+// for (let i = 0; i < 1000; i++) {
+//       console.log('inside for loop') 
+// }
+// console.log('Another Task')
+ 
+//🔥 setTimeoout
+// console.log('script Start')
+// const givenId = setTimeout(()=>{  
+//     console.log('mid of Script')
+//     // This function provided by Browser
+//     //    setTimeout is a Web API
+// // Call Stack
+// //  Event Loop 
+// // Callback Queue
+// },1000)
+// console.log('The Id of setTimeout is ', givenId)
+// clearTimeout(givenId)
+// console.log('script end')
+
+//🔥 setInterval
+
+// setInterval(()=>{
+//     console.log(Math.floor(Math.random()*10))
+//     for (let i = 0; i <100 ; i++) {
+    //         console.log('hello')
+    
+//     }
+//     console.log('script End')
+// },1000)
+
+// const body = document.body;
+// const stopBtn = document.querySelector('button')
+// const colorSpan = document.querySelector('.color-code')
+
+// const interverId = setInterval(()=>{
+    //     const red = Math.floor(Math.random()*256)
+    //     const green = Math.floor(Math.random()*256)
+//     const blue = Math.floor(Math.random()*256)
+//     const rgb = `rgb(${red},${green},${blue})`
+//     body.style.backgroundColor = rgb;
+//     colorSpan.textContent = rgb;
+// },2000)
+// stopBtn.addEventListener('click',()=>{
+    //     clearInterval(interverId)
+    // })
+    
+//🔥 CallBacks in general
+
+// function func1(anotherFunc){
+//   console.log('fuction is doing task1')
+//   anotherFunc()
+// }
+// function func2(){
+//     console.log('function is doing task2')
+// } 
+// func1(func2) // function taking another function as a argument
+ 
+// function getTwoNumbersAndAdd(num1,num2,callback){ // This num1 and num2 are parameters
+//   console.log(num1,num2)
+//   callback(5,6)
+// }
+// function addTwoNumbers(number1,number2){
+//      console.log(number1 + number2)
+// }
+// getTwoNumbers(1,2,addTwoNumbers)
+
+// 🔥 Normal callBack in syncronys JS 
+
+// function getAndMultiply(num1,num2,onSucces,onError){
+    //      if (typeof(num1)=== 'number' && typeof(num2)=== 'number') {
+        //         onSucces(num1,num2)
+        //      } else {
+//         onError()
+//      }
+// }
+// getAndMultiply(52,2,
+//     (number1,number2)=>{
+//         console.log(number1*number2)
+// },
+// ()=>{
+    //     console.log('Wrong DataType')
+    // })
+    
+// 🔥 callBacks in Asynchronous JS 
+
+//  Color Changing Heading Mini Project
+
+// const allH1 = document.querySelectorAll('h1')
+// console.log(allH1)
+// let count  = 0;
+// const intervalId =setInterval(() => {
+//         const color = ['violet','purple','red','pink','green','blue','brown']
+//         allH1[count].textContent = `Heading ${count+1}`
+//         allH1[count].style.color = color[count]
+//         count++
+//         if (count === allH1.length) {
+//             clearInterval(intervalId)
+//         }
+//     }, 1000)  
+
+// 🔥 Promises
 
 
 
+   
+ 
+
+
+
+    
     

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    transition: all 0.4s ease-in-out;
+}
+
+/* Code for back changing setInterval test */
+/* body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.color-code{
+    width: 150px;
+    height: 35px;
+    background-color: rgb(58, 74, 250);
+    color: white;
+    border: 2px dashed white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.stop{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    border: 2px solid black;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aqua;
+} */
