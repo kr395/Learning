@@ -1807,20 +1807,20 @@
 
 // function calc(times = 0) {
 //   return function (number = 0) {
-    //     number = number ** times;
-    //     console.log(number);
-    //   };
-    // }
-    
-    // const squre = calc(2);
-    // squre(6);
-    
-    // Shorting Function
-    // const calc =(power)=> (number)=> number ** power
-    // const squre = calc(2)
-    // console.log(squre(5))
-    
-    // ✅ Task
+//     number = number ** times;
+//     console.log(number);
+//   };
+// }
+
+// const squre = calc(2);
+// squre(6);
+
+// Shorting Function
+// const calc =(power)=> (number)=> number ** power
+// const squre = calc(2)
+// console.log(squre(5))
+
+// ✅ Task
 
 // function myFunc(){
 //     let counter = 0;
@@ -1831,7 +1831,7 @@
 //         } else {
 //             console.log("Already called")
 //         }
-        
+
 //     }
 // }
 
@@ -1839,24 +1839,23 @@
 // result()
 // result()
 
-
 //  Video 3
 
 // JS is a Synchronous Programming and single threted
 // console.log('Script Started')
 // for (let i = 0; i < 1000; i++) {
-//       console.log('inside for loop') 
+//       console.log('inside for loop')
 // }
 // console.log('Another Task')
- 
+
 //🔥 setTimeoout
 // console.log('script Start')
-// const givenId = setTimeout(()=>{  
+// const givenId = setTimeout(()=>{
 //     console.log('mid of Script')
 //     // This function provided by Browser
 //     //    setTimeout is a Web API
 // // Call Stack
-// //  Event Loop 
+// //  Event Loop
 // // Callback Queue
 // },1000)
 // console.log('The Id of setTimeout is ', givenId)
@@ -1868,8 +1867,8 @@
 // setInterval(()=>{
 //     console.log(Math.floor(Math.random()*10))
 //     for (let i = 0; i <100 ; i++) {
-    //         console.log('hello')
-    
+//         console.log('hello')
+
 //     }
 //     console.log('script End')
 // },1000)
@@ -1879,17 +1878,17 @@
 // const colorSpan = document.querySelector('.color-code')
 
 // const interverId = setInterval(()=>{
-    //     const red = Math.floor(Math.random()*256)
-    //     const green = Math.floor(Math.random()*256)
+//     const red = Math.floor(Math.random()*256)
+//     const green = Math.floor(Math.random()*256)
 //     const blue = Math.floor(Math.random()*256)
 //     const rgb = `rgb(${red},${green},${blue})`
 //     body.style.backgroundColor = rgb;
 //     colorSpan.textContent = rgb;
 // },2000)
 // stopBtn.addEventListener('click',()=>{
-    //     clearInterval(interverId)
-    // })
-    
+//     clearInterval(interverId)
+// })
+
 //🔥 CallBacks in general
 
 // function func1(anotherFunc){
@@ -1898,9 +1897,9 @@
 // }
 // function func2(){
 //     console.log('function is doing task2')
-// } 
+// }
 // func1(func2) // function taking another function as a argument
- 
+
 // function getTwoNumbersAndAdd(num1,num2,callback){ // This num1 and num2 are parameters
 //   console.log(num1,num2)
 //   callback(5,6)
@@ -1910,12 +1909,12 @@
 // }
 // getTwoNumbers(1,2,addTwoNumbers)
 
-// 🔥 Normal callBack in syncronys JS 
+// 🔥 Normal callBack in syncronys JS
 
 // function getAndMultiply(num1,num2,onSucces,onError){
-    //      if (typeof(num1)=== 'number' && typeof(num2)=== 'number') {
-        //         onSucces(num1,num2)
-        //      } else {
+//      if (typeof(num1)=== 'number' && typeof(num2)=== 'number') {
+//         onSucces(num1,num2)
+//      } else {
 //         onError()
 //      }
 // }
@@ -1924,10 +1923,10 @@
 //         console.log(number1*number2)
 // },
 // ()=>{
-    //     console.log('Wrong DataType')
-    // })
-    
-// 🔥 callBacks in Asynchronous JS 
+//     console.log('Wrong DataType')
+// })
+
+// 🔥 callBacks in Asynchronous JS
 
 //  Color Changing Heading Mini Project
 
@@ -1942,16 +1941,61 @@
 //         if (count === allH1.length) {
 //             clearInterval(intervalId)
 //         }
-//     }, 1000)  
+//     }, 1000)
 
 // 🔥 Promises
 
+// We work on promises value will come in future
 
+// const programing = ["Computer", "Internet", "Basic Math", "Urge to learn"];
 
-   
- 
+// // producePromises
+// const programingPromise = new Promise((resolve, reject) => {
+//   if (
+//     programing.includes("Computer") &&
+//     programing.includes("Internet") &&
+//     programing.includes("Basic Math") &&
+//     programing.includes("Urge to learn")
+//   ) {
+//     resolve("You can Learn Programing");
+//   } else {
+//     reject("Better Luck in future");
+//   }
+// });
+// // Consume Promise
 
+// programingPromise.then(
+//   (resolveMassage) => {
+//     console.log(resolveMassage);
+//   },
+// ).catch((err) => {
+//     console.log(err);
+// });
 
+// Another Promise
 
+// console.log('Script Started')
+// const carom = ['Bord','coin','person',true]
+// // Promise Goes to micro task Queue
+// const caromPromise =  new Promise((resolve, reject) => {
+//     if (carom.includes('Bord')&&carom.includes('coin')&&carom.includes('person')&&carom.includes(true)){
+//         resolve('We can play caram')
+//     }
+//      else {
+//          reject({name:'Mohit', message:'Doing Ticket'})
+//     }
+// })
+// caromPromise.then((resoveMsg)=>{
+//     console.log(resoveMsg);
+// }).catch((err) => {
+//     console.log(err);
+// })
+// setTimeout(()=>{
+//     console.log('Inside setTimeout')
+// },1000)
+// //  first priority will be microtask Queue
+// for (let index = 0; index < 1000; index++) {
+//     console.log('hello')
     
-    
+// }
+// console.log('script End')
