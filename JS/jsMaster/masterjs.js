@@ -1999,3 +1999,59 @@
     
 // }
 // console.log('script End')
+
+
+//🔥 Function returning promise
+
+// function returnPromise(){
+//     const carom = ['Bord','coin','person',true]
+//     // Promise Goes to micro task Queue
+//     return new Promise((resolve, reject) => {
+//         if (carom.includes('Bord')&&carom.includes('coin')&&carom.includes('person')&&carom.includes(true)){
+//             resolve('We can play caram')
+//         }
+//          else {
+//              reject({name:'Mohit', message:'Doing Ticket'})
+//         }
+//     })
+//     caromPromise.then((resoveMsg)=>{
+//         console.log(resoveMsg);
+//     }).catch((err) => {
+//         console.log(err);
+//     })
+// }
+
+// returnPromise().then((resoveMsg)=>{ // .then return promise
+//     console.log(resoveMsg);
+// }).catch((err) => {
+//     console.log(err);
+// })
+
+// 🔥 Promise.resolve
+// 🔥 Promise.chaining
+
+// const resalvedValue = Promise.resolve()
+
+// function myFunc(){
+//    return new Promise((resolve, reject)=>{
+//       resolve('Its My Birthday')
+//    })
+// }
+
+// myFunc().then(Status=>{
+//     console.log(Status)
+//     Status += 'Time';
+//     return Status
+// }).then(result=>{
+//     console.log(result);
+//     result += 'Lets Engoy'
+//     return result
+// }).then(result=>{
+//     console.log(result);
+// }) // this is chainig
+
+
+// Previous Heading project with Promises
+
+
+
