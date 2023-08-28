@@ -1996,10 +1996,9 @@
 // //  first priority will be microtask Queue
 // for (let index = 0; index < 1000; index++) {
 //     console.log('hello')
-    
+
 // }
 // console.log('script End')
-
 
 //🔥 Function returning promise
 
@@ -2050,8 +2049,136 @@
 //     console.log(result);
 // }) // this is chainig
 
-
 // Previous Heading project with Promises
 
+//  Color Changing Heading Mini Project
 
+// Old Code
+// const allH1 = document.querySelectorAll('h1')
+// console.log(allH1)
+// let count  = 0;
+// const intervalId =setInterval(() => {
+//         const color = ['violet','purple','red','pink','green','blue','brown']
+//         allH1[count].textContent = `Heading ${count+1}`
+//         allH1[count].style.color = color[count]
+//         count++
+//         if (count === allH1.length) {
+//             clearInterval(intervalId)
+//         }
+//     }, 1000)
+
+// New Code
+
+// const allH1 = document.querySelectorAll('h1')
+// let count  = 0;
+// const color = ['violet','purple','red','pink','green','blue','brown'];
+// function changeText(elemet,color,time) {
+//    return new Promise((resolve, reject) => {
+//       setTimeout(()=>{
+//         if (elemet) {
+//         elemet.textContent = `Heading ${count+1}`;
+//         allH1[count].style.color = color
+//         count++
+//         resolve(
+//             console.log('Success'));
+//      } else{
+//         reject()
+//      }},time)
+//    })
+// }
+// changeText(allH1[0],color[0],1000)
+// .then(()=>{
+//      return changeText(allH1[1],color[1],1000)
+// })
+// .then(()=>{
+//     return changeText(allH1[2],color[2],1000)
+// })
+// .then(()=>{
+//     return changeText(allH1[3],color[3],1000)
+// })
+// .then(()=>{
+//     return changeText(allH1[4],color[4],1000)
+// })
+// .then(()=>{
+//     return changeText(allH1[5],color[5],1000)
+// })
+// .then(()=>{
+//     return changeText(allH1[6],color[6],1000)
+// }).catch((err)=>{console.log(err)});
+
+// 🔥 AJAX : asynchronous javascript and XML
+
+// > HTTP rquest
+
+// is a set of "web development techniques"
+// using many web technologies on the "client-side"
+// to create asynchronous web applications.
+
+// With Ajax, web applications can send and retrieve
+// data from a server asynchronously (in the background)
+// without interfering with the display and
+// behaviour of the existing page
+
+// We don't use data in XML format anymore.
+// we use JSON now.
+
+// we have 3 most common ways to create and send request to server
+// 1.) xmlHTTPRequest (old way of doing)
+// 2.) fetch API (new way of doing)
+// 3.) axios (this is third party library)
+
+// 🔥 HTTP rquest
+// Step 1: use .open() method
+// Step 2: use .send() method
+// const URL = "https://jsonplaceholder.typicode.com/posts"
+// const xhrObject = new XMLHttpRequest();
+// console.log(xhrObject)
+// // console.log(xhrObject.readyState)
+// xhrObject.open('GET',URL);
+// console.log(xhrObject.readyState)
+// xhrObject.onreadystatechange = function(){
+//     // console.log(xhrObject.readyState)
+//     if (xhrObject.readyState === 4) {
+//         const response = xhrObject.response;
+//         console.log(typeof(response)); // This is a string
+//       const data = JSON.parse(response) // This converst into object
+//     }
+// }
+// xhrObject.onload = function(){
+//        const response = xhrObject.response;
+//        const data = JSON.parse(response);
+//        console.log(data)
+// };
+// xhrObject.send()
+
+// 🔥 Error Handaling
+
+// const URL = "https://jsonplaceholder.typicode.com/posts";
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", URL);
+// xhr.onloadend = function () {
+//   if (xhr.status >= 200 && xhr.status < 300) {
+//     const data = JSON.parse(xhr.response);
+//     // console.log(data)
+//     const id = data[3].id;
+//     const newXhr = new XMLHttpRequest();
+//     const newURL = `${URL}/${id}`;
+//     newXhr.open('GET', newURL);
+//     newXhr.onload = function (){
+//         const userData = newXhr.response;
+//         const dataObject = JSON.parse(userData);
+//         console.log(dataObject);
+//     }
+//     newXhr.send();
+   
+//   } else {
+//     console.log("Something went wrong");
+//   }
+// };
+// xhr.onerror = () => {
+//   console.log("Network error");
+// };
+// xhr.send();
+
+// Video Time 3:01:23
 
