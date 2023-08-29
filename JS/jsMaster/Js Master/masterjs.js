@@ -2170,7 +2170,7 @@
 //         console.log(dataObject);
 //     }
 //     newXhr.send();
-   
+
 //   } else {
 //     console.log("Something went wrong");
 //   }
@@ -2180,5 +2180,101 @@
 // };
 // xhr.send();
 
-// Video Time 3:01:23
+// 🔥 xhr Using Promise
+// const URL = "https://jsonplaceholder.typicode.com/posts";
+// function sendRequest(method,url) {
+//   return new Promise((resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
+//     xhr.open(method,url);
+//     xhr.onloadend = function () {
+    //       if (xhr.status >= 200 && xhr.status < 300) {
+        //         const data = JSON.parse(xhr.response);
+        //         resolve(data)
+        //       } else {
+            //         reject(new Error("Something went wrong"));
+//       }
+//     };
+//     xhr.onerror = () => {
+    //       console.log("Network error");
+    //     };
+    //     xhr.send();
+    //   });
+// }
+// sendRequest("GET",URL).then((data)=>{
+//     return data
+// }).then((data)=>{
+//     const id = data[3].id;
+//     const newURL = `${URL}/${id}`;
+//      sendRequest("GET",newURL).then((response)=>{
+//         return response;
+//      }).then((response)=>{
+    //       console.log(response.title)
+    //     })
+    // })
+    // .catch((error)=>{
+        //     console.log(error)
+        // })
+        
+// 🔥 fetch 
+// GET , POST,PUT,PATCH,DELETE
+// const URL = "https://jsonplaceholder.typicode.com/posts";
 
+// // fetch only reject network error not 404 server error
+// fetch(URL).then((response)=>{
+//     if(response.ok === true){
+//         return response.json()
+//     }else{
+//         throw new Error("Something went wrong")
+//     }
+// }).then(response =>{
+//     console.log(response[0])
+// }).catch((error)=>{
+//     console.log('inside catch block')
+//     console.log(error)
+// })
+
+// fetch(URL, {
+//   method: 'POST',
+//   body: JSON.stringify({
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//  🔥 async and await
+
+// const URL = "https://jsonplaceholder.typicode.com/posts";
+
+// async function getPosts(){
+//     const response = await fetch(URL)
+//     if (!response.ok) {
+//         throw new Error("Couldn't get posts");
+//     }
+//     const data = await response.json();
+//     return data
+// }
+// // fetch(URL).then((response) => response.json()).then((json) =>{console.log(json[0])})
+// getPosts()
+// .then((response) => {console.log(response)})
+// .catch((error) => {console.log(error)});
+
+// 🔥 ES6 Modules
+
+// import { person } from "./module.js";
+// const person1 = new person("Gopal","Kumar Das","Gopal@gmail.com","1234")
+// person1.about()
+
+
+
+// Video Ends
+// console.log('Gopal')
+
+// const heading = document.getElementsByTagName('h1');
+// console.log(heading)
+// heading[0].style.color = 'red';
