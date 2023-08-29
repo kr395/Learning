@@ -18,7 +18,7 @@
   
   .todo-fild{
     width: auto;
-    height: min-content;
+    height: auto;
     background-color: bisque;
     padding: 0.5rem;
     display: flex;
